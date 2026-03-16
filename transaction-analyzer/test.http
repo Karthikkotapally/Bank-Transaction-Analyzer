@@ -1,0 +1,18 @@
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Electricity Bill",
+  "amount": 400,
+  "type": "DEBIT",
+  "date": "2026-02-10"
+}
+
+###
+GET http://localhost:8082/transactions/type/DEBIT
+
+###
+GET http://localhost:8082/transactions/type/CREDIT
+
+###
+GET http://localhost:8082/transactions/summary?year=2026&month=3
